@@ -1,0 +1,46 @@
+button {
+  background-color: #f4a261;
+  color: white;
+  width: 30%;
+  height: 40px;
+
+  border: 0;
+  border-radius: 10px;
+}
+#btn_add_day {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+  margin: 10px 20px;
+  padding: 40px 40px;
+  background-color: #e79051ba;
+}
+
+.container-day {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  padding: 10px 0px;
+  border-radius: 10px;
+  background-color: #e79051;
+}
+
+.container-food-intake {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-food-intake {
+  vertical-align: baseline;
+
+  color: white;
+  margin-left: 20px;
+}
