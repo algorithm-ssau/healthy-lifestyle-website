@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"/>
+		<title>Регестрация</title>		
+        <link rel="stylesheet"
+		href="registration.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<h2>Регестрация</h2>
+			<form action="">
+				<label for="first"
+					>Логин:</label
+				>
+				<input
+					type="text"
+					id="first"
+					name="first"
+					required
+				/>
+
+				<label for="email">Почта:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+				/>
+
+				<label for="password"
+					>Пароль:</label
+				>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+					title="Пароль должен содержать как минимум одну цифру,одину букву алфавита, один символ и быть длиной не менее 8 символов"
+					required
+				/>
+
+				<label for="repassword"
+					>Повторите свой пароль:</label
+				>
+				<input
+					type="password"
+					id="repassword"
+					name="repassword"
+					required
+				/>
+
+				<label for="gender"
+					>Пол:</label
+				>
+				<select
+					id="gender"
+					name="gender"
+					required
+				>
+					<option value="male">
+						Мужчина
+					</option>
+					<option value="female">
+						Женщина
+					</option>
+				</select>
+
+				<button type="submit">
+					Зарегестрироваться
+				</button>
+			</form>
+		</div>
+	</body>
+</html>

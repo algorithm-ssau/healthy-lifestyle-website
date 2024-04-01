@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Вход в личный кабинет</title>
+	<link rel="stylesheet"
+		href="style_input.css">
+</head>
+
+<body>
+	<div class="main">
+		<h1>Счётчик каллорий</h1>
+		<h3>Введите свои учетные данные для входа</h3>
+		<form action="">
+			<label for="first">
+				Логин:
+			</label>
+			<input type="text"
+				id="first"
+				name="first"
+				placeholder="Введите ваш логин" required>
+
+			<label for="password">
+				Пароль:
+			</label>
+			<input type="password"
+				id="password"
+				name="password"
+				placeholder="Введите ваш пароль" required>
+
+			<div class="wrap">
+				<button type="войти"
+						onclick="solve()">
+					Войти
+				</button>
+			</div>
+		</form>
+		<p>Нет акаунта? 
+			<a href="#"
+			style="text-decoration: none;">
+				Зарегестрироваться
+			</a>
+		</p>
+	</div>
+</body>
+
+</html>
