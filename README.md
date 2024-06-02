@@ -5,7 +5,7 @@
 Сайт где пользователи пишут статьи о рецептах полезного питания.
 
 ## :computer: Используемые технологии
-- **Фронтенд:**
+ **Фронтенд:**
 - ReactJS 
 - Redux Toolkit
 - React Hook Form
@@ -13,7 +13,7 @@
 - React Markdown/Simple Editor
 - Axios
 
-- **Бэкенд:**
+ **Бэкенд:**
 - NodeJS
 - Express+Validator
 - MongoDB
