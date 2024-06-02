@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="personal_account.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+    <div class="div-main">
+      <div class="div-greeting">
+        <p style="margin: 20px 0">Привет, Имя!</p>
+        <img
+          src="https://icon-icons.com/icons2/1812/PNG/512/4213460-account-avatar-head-person-profile-user_115386.png"
+          alt="аватарка"
+          style="width: 40%"
+        />
+      </div>
+
+      <form action="" method="get" class="form-client-data">
+        <div style="display: flex; justify-content: space-between">
+          <div class="div-inputs">
+            <label for="userName">Имя</label>
+            <input id="userName" name="userName" type="text" />
+          </div>
+          <div class="div-inputs">
+            <label for="userSurname">Фамилия</label>
+            <input id="userSurname" name="userSurname" type="text" />
+          </div>
+        </div>
+
+        <div class="div-inputs">
+          <label for="userBirthdate">Дата рождения</label>
+          <input id="userBirthdate" name="userBirthdate" type="userBirthdate" />
+        </div>
+
+        <div class="div-inputs">
+          <label for="userHeight">Рост (см)</label>
+          <input
+            id="userHeight"
+            name="userHeight"
+            type="number"
+            min="100"
+            max="250"
+          />
+        </div>
+
+        <div class="div-inputs">
+          <label for="userWeight">Вес (кг)</label>
+          <input id="userWeight" name="userWeight" type="number" min="20" />
+        </div>
+
+        <div class="div-inputs">
+          <label for="userTargetWeight">Цель (кг)</label>
+          <input
+            id="userTargetWeight"
+            name="userTargetWeight"
+            type="number"
+            min="20"
+          />
+        </div>
+
+        <div style="display: flex; justify-content: right">
+          <input
+            type="submit"
+            value="Сохранить"
+            style="width: 200px; height: 40px"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

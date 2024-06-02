@@ -7,33 +7,41 @@
         </title>
     </head>
 
-    <div>
-    <div id = "div_dishes_Table">
-        <div id = "div_first_Row">
+    <body style="background-color: rgb(255, 248, 248);">
 
-            <span id = "span_name">Название</span>
+        <h2> Приём пищи</h2>
 
-            <div id = "div_choice">
-                <input type="radio" id ="gramm" name = "choice" value = "грамм" />
-                <label for="gramm">грамм</label>
+        <div class="div_Both_Pages">
+            <div class="div_First_Table">
+                <div class = "div_Header">
 
-                <input type="radio" id ="kal" name = "choice" value = "калории" />
-                <label for="kal">калории</label>
-            </div>
-
-            <div id = "div_result">
-                <span id = "span_result">Граммы</span>
-            </div>
-        </div>
-        <div id = "div_second_Row">
-            <span id = "span_add_Product">Добавить<br>продукт</span>
-            <button id = "button_Add" type = "button">+</button>
-        </div>
-    </div>
-
-    <div id = "div_kal_Amount">
-        <span id = "span_kal_Amount">Итого<br>калорий:<br>500</span>
-    </div>
+                    <span class="span_Name">Название</span>
+                    <div class = "div_Choice">
+                        <input type="radio" id ="gramm" name = "choice" value = "грамм" />
+                        <label for="gramm">грамм</label>
     
-</html>
+                        <input type="radio" id ="kal" name = "choice" value = "калории" checked/>
+                        <label for="kal">калории</label>
 
+                    </div>
+
+                    <div class="div_Display_Choice">
+                        <span class="span_Display_Choice">Калории</span>
+                    </div>
+                </div>
+
+                <div id = "div_Add_Row">
+
+                    <span id = "span_Add_Product">Добавить<br>продукт</span>
+
+                    <div class="div_Button_Container">
+                        <button id = "button_Add_Product" type = "button">+</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="div_Second_Table">
+                <span id="span_Result">Итого калорий<br>500</span>
+            </div>
+        </div>
