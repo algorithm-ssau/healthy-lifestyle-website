@@ -28,7 +28,7 @@ app.post('/auth/login',async(req,res)=> {
         const isValidPass=await bcrypt.compare(req.body.password,user._doc.passwordHash);
 
         if(!isValidPass){
-            return res.status(404).json({
+            return res.status(400).json({
                 message:'Неверный логин или пароль',
             });
 
@@ -116,7 +116,14 @@ app.post('/auth/register',registerValidation,async(req,res)=>{
     }
      
   });
-    
+   
+  //роут на получение информации о себе
+  app.get('/auth/me',(req,res)=>{
+    try{}
+    catch(err){
+        
+    }
+  })
 
 
 app.listen(4444,(err)=>
