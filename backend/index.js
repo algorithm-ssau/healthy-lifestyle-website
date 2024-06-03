@@ -28,7 +28,7 @@ app.post('/auth/register',registerValidation,async(req,res)=>{
     const password=req.body.password;
     const salt= await bcrypt.genSalt(10);
     //в этой перменной будет храниться зашифрованный пароль(переменная passwordHash)
-    const passwordHash=await bcrypt.hash(password,salt);
+    const hash=await bcrypt.hash(password,salt);
  
  
  
@@ -36,15 +36,33 @@ app.post('/auth/register',registerValidation,async(req,res)=>{
      email:req.body.email,
      fullName:req.body.fullName,
      avatarUrl:req.body.avatarUrl,
-     passwordHash,
+     passwordHash:hash,
     });
 
 
     //создаем пользователя в mongodb сохраняем его в документ
     const user =await doc.save();
 
+
+    //id пользователя достаточно для проверок пользователя
+    //шифруем id
+    const token =jwt.sign({
+        _id:user._id,
+
+    },'secret123',
+       {
+         //срок хранения токена (перестанит быть валидным через 30 дней)
+         expiresIn:'30d',
+
+       }
+    );
+    const { passwordHash,...userData}=user._doc;
+
     //важно что два res.json(user); нельзя возвращать express будет ругаться
-    res.json(user);
+    res.json({
+        ...userData,
+        token,
+    });
 
     }
     catch(err){
