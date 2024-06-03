@@ -7,6 +7,7 @@ import {validationResult} from 'express-validator'
 import {registerValidation}from './validations/auth.js'
 
 import UserModel from './models/Users.js'
+import CheckAuth from './untils/CheckAuth.js'
 
 mongoose.
    connect('mongodb+srv://alexchelpek:01082003@cluster0.u9eeurr.mongodb.net/blog?retryWrites=true&w=majority&appName=Cluster0',)
@@ -117,11 +118,27 @@ app.post('/auth/register',registerValidation,async(req,res)=>{
      
   });
    
-  //роут на получение информации о себе
-  app.get('/auth/me',(req,res)=>{
-    try{}
+  //роут на получение информации о себе(проверка можем ли получить информацию о себе)
+  app.get('/auth/me',CheckAuth,async(req,res)=>{
+    try{
+        const user= await UserModel.findById(req.userId);
+        if(!user){
+            return res.status(404).json({
+                message:'Пользователь не найден',
+
+            });
+        }
+    const { passwordHash,...userData}=user._doc;
+
+    
+    res.json(userData);
+
+    }
     catch(err){
-        
+        console.log(err);
+        res.status(500).json({message:'Нет доступа',});
+
+
     }
   })
 
