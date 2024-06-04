@@ -1,9 +1,9 @@
-import PostModel from '../models/Post';
+import PostModel from '../models/Post.js';
 
 export const create = async (req, res) => {
     try {
         const doc = new PostModel({
-            title: req.body.title,
+            title: req.body.title, 
             text: req.body.title,
             imageUrl: req.body.imageUrl,
             tags: req.body.tags,
@@ -20,4 +20,4 @@ export const create = async (req, res) => {
           message: 'Не удалось создать статью',
         });
     }
-}
+};

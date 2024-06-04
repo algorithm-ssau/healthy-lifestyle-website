@@ -2,7 +2,7 @@ import express from 'express';
 
 import mongoose from 'mongoose'
 
-import {registerValidation, loginValidation}from './validations.js'
+import {registerValidation, loginValidation, postCreateValidation}from './validations.js'
 
 import CheckAuth from './untils/CheckAuth.js'
 
@@ -22,8 +22,15 @@ app.post('/auth/login',loginValidation, UserController.login);
 //registration
 app.post('/auth/register',registerValidation,UserController.register);
    
-  //роут на получение информации о себе(проверка можем ли получить информацию о себе)
-  app.get('/auth/me',CheckAuth,UserController.getMe);
+//роут на получение информации о себе(проверка можем ли получить информацию о себе)
+app.get('/auth/me',CheckAuth, UserController.getMe);
+
+
+//роуты для статей
+// app.get('/posts',PostController.getAll);
+// app.get('/posts/:id',PostController.getOne);
+app.post('/posts',CheckAuth, postCreateValidation, PostController.create);
+// app.patch('/posts',PostController.update);
 
 
 app.listen(4444,(err)=>
