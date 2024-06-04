@@ -2,9 +2,7 @@ import express from 'express';
 
 import mongoose from 'mongoose'
 
-
 import {registerValidation}from './validations/auth.js'
-
 
 import CheckAuth from './untils/CheckAuth.js'
 
