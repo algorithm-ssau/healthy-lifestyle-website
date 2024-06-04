@@ -2,11 +2,12 @@ import express from 'express';
 
 import mongoose from 'mongoose'
 
-import {registerValidation}from './validations/auth.js'
+import {registerValidation, loginValidation}from './validations.js'
 
 import CheckAuth from './untils/CheckAuth.js'
 
 import * as UserController from './controllers/UserController.js';
+import * as PostController from './controllers/PostController.js';
 
 mongoose.
    connect('mongodb+srv://alexchelpek:01082003@cluster0.u9eeurr.mongodb.net/blog?retryWrites=true&w=majority&appName=Cluster0',)
@@ -17,7 +18,7 @@ const app=express();
 app.use(express.json());
 
 //автризация
-app.post('/auth/login',UserController.login);
+app.post('/auth/login',loginValidation, UserController.login);
 //registration
 app.post('/auth/register',registerValidation,UserController.register);
    
