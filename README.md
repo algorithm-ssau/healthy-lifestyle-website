@@ -12,6 +12,7 @@
 - React Router 
 - React Markdown/Simple Editor
 - Axios
+Ссылка на второй репозиторий с frontend-частью: [frontend-репозиторий](https://github.com/algorithm-ssau/healthy-lifestyle-website-frontend)
 
  **Бэкенд:**
 - NodeJS
