@@ -1,4 +1,5 @@
 import express from 'express';
+import multer from 'multer';
 
 import mongoose from 'mongoose'
 
@@ -15,15 +16,38 @@ mongoose.
    .catch((err) => console.log('DB error',err));
 
 const app=express();
+
+//хранилище для сохранения картинок
+const storage = multer.diskStorage({
+    destination: (_, __, cb) => {
+     
+      cb(null, 'uploads');
+    },
+    filename: (_, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+
+const upload = multer({ storage });
+
+
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
+
 
 //автризация
 app.post('/auth/login',loginValidation, UserController.login);
 //registration
 app.post('/auth/register',registerValidation,UserController.register);
-   
 //роут на получение информации о себе(проверка можем ли получить информацию о себе)
 app.get('/auth/me',CheckAuth, UserController.getMe);
+
+//
+app.post('/upload',CheckAuth,upload.single('image'), (req, res) => {
+    res.json({
+      url: `/uploads/${req.file.originalname}`,
+    });
+  });
 
 
 //роуты для статей
