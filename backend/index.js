@@ -1,6 +1,5 @@
 import express from "express";
 
-//-------Даша------
 import cors from "cors";
 
 import mongoose from "mongoose";
@@ -26,7 +25,6 @@ mongoose
 const app = express();
 app.use(express.json());
 
-//----------Даша------
 app.use(cors());
 
 //автризация
@@ -38,6 +36,7 @@ app.post("/auth/register", registerValidation, UserController.register);
 app.get("/auth/me", CheckAuth, UserController.getMe);
 
 //роуты для статей
+app.get("/tags", PostController.getLastTags);
 app.get("/posts", PostController.getAll);
 app.get("/posts/tags", PostController.getLastTags);
 app.get("/posts/:id", PostController.getOne);
