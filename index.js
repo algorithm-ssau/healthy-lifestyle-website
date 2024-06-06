@@ -14,9 +14,7 @@ import * as UserController from "./controllers/UserController.js";
 import * as PostController from "./controllers/PostController.js";
 
 mongoose
-  .connect(
-    "mongodb+srv://alexchelpek:01082003@cluster0.u9eeurr.mongodb.net/blog?retryWrites=true&w=majority&appName=Cluster0"
-  )
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("DB OK"))
   .catch((err) => console.log("DB error", err));
 
