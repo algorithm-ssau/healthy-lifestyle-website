@@ -32,10 +32,10 @@ https://healthy-lifestyle-website-frontend.vercel.app/
 
 ## Участники проекта 
 
-|     Ник       |          Имя            |          Роль
-| ------------- | ----------------------- | -----------------------
-|  DariaAntt    |     Антипова Дарья      |   Team lead + Frontend
-|  rarayoyong   |   Григорьева Анастасия  |        Frontend
-|  OlGa-Aleks   |    Александрова Ольга   |        Backend
-|  Kiriushonok  |    Садовников Кирилл    |        Backend
+|                      Ник                       |          Имя            |          Роль
+| ---------------------------------------------  | ----------------------- | -----------------------
+|  [DariaAntt](https://github.com/DariaAntt)     |     Антипова Дарья      |   Team lead + Frontend
+|  [rarayoyong](https://github.com/rarayoyong)   |   Григорьева Анастасия  |        Frontend
+|  [OlGa-Aleks](https://github.com/OlGa-Aleks)   |    Александрова Ольга   |        Backend
+|  [Kiriushonok](https://github.com/Kiriushonok) |    Садовников Кирилл    |        Backend
 
