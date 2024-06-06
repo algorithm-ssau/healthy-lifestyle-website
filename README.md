@@ -8,7 +8,7 @@
 
 https://healthy-lifestyle-website-frontend.vercel.app/
 
-## :computer: Используемые технологии
+
 
 ## :computer: Используемые технологии
  **Фронтенд:**
