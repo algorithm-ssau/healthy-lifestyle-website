@@ -4,6 +4,12 @@
     
 Сайт где пользователи пишут статьи о рецептах полезного питания.
 
+## Сайт:
+
+https://healthy-lifestyle-website-frontend.vercel.app/
+
+## :computer: Используемые технологии
+
 ## :computer: Используемые технологии
  **Фронтенд:**
 - ReactJS 
