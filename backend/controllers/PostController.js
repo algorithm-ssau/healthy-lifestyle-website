@@ -32,7 +32,7 @@ export const getAll = async (req, res) => {
   }
 };
 
-export const getOne = async (req, res) => {
+export const getOne = (req, res) => {
   try {
     const postId = req.params.id;
 
@@ -46,19 +46,21 @@ export const getOne = async (req, res) => {
       {
         returnDocument: "after",
       }
-    ).then((doc) => {
-      if (!doc) {
-        return res.status(404).json({
-          message: "Статья не найдена",
-        });
-      }
+    )
+      .populate("user")
+      .then((post) => {
+        if (!post) {
+          return res.status(404).json({
+            message: "статьтя не найдена",
+          });
+        }
 
-      res.json(doc);
-    });
-  } catch (err) {
-    console.log(err);
+        res.json(post);
+      });
+  } catch (error) {
+    console.log(error);
     res.status(500).json({
-      message: "Не удалось получить статьи",
+      messgae: "не удалось получить статью",
     });
   }
 };
@@ -94,7 +96,7 @@ export const create = async (req, res) => {
       title: req.body.title,
       text: req.body.text,
       imageUrl: req.body.imageUrl,
-      tags: req.body.tags,
+      tags: req.body.tags.split(","),
       user: req.userId,
     });
 
