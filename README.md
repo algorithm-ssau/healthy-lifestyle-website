@@ -6,7 +6,7 @@
 
 ## Сайт:
 
-https://healthy-lifestyle-website-frontend.vercel.app/
+
 
 
 
