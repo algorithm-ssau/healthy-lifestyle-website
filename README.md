@@ -46,12 +46,13 @@ npm init
 ```
 npm install express
 ```
-6. Необходимо поправить код в файле index.js. заменить 
+6.  Необходимо поправить код в файле index.js. заменить 
 ```
 process.env.MONGODB_URI на
 ```
 на IP адресс MongoDB
-7. Ввести в терминал команду:
+
+7.  Ввести в терминал команду:
 ```
 node index.js
 ```
@@ -63,6 +64,7 @@ Server OK
 DB OK
 ```
 что значит backend успешно запущен.
+
 8. Запустить   [фронтенд](https://github.com/algorithm-ssau/healthy-lifestyle-website-frontend.git) (инструкция по его запуску указанна в его репозитории)
 
 ## Участники проекта 
