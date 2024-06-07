@@ -29,6 +29,41 @@ https://healthy-lifestyle-website-frontend.vercel.app/
 - BCrypt
 
 ## :hammer: Установка 
+1. Создать папку в которой будет храниться проект
+2. Открыть папку в терминале
+3. Клонировать репозиторий введя в терминал команду:
+```
+git clone https://github.com/algorithm-ssau/healthy-lifestyle-website.git
+```
+4. Перейти в папку healthy-lifestyle-website введя в терминал команду:
+```
+cd healthy-lifestyle-website
+```
+5. Поочередно выполнить следующие команды в терминале:
+```
+npm init
+```
+```
+npm install express
+```
+6. Необходимо поправить код в файле index.js. заменить 
+```
+process.env.MONGODB_URI на
+```
+на IP адресс MongoDB
+7. Ввести в терминал команду:
+```
+node index.js
+```
+В результате должны быть выведены строки: 
+```
+Server OK
+```
+```
+DB OK
+```
+что значит backend успешно запущен.
+8. Запустить   [фронтенд](https://github.com/algorithm-ssau/healthy-lifestyle-website-frontend.git) (инструкция по его запуску указанна в его репозитории)
 
 ## Участники проекта 
 
